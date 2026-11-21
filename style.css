@@ -1,0 +1,134 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #176b50;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+header img {
+    display: block;
+    margin: auto;
+}
+
+/* Section styling */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #176b50;
+}
+
+/* Form styling */
+.add-expense-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Advanced selector 1: Focus pseudo-class */
+input:focus,
+select:focus {
+    outline: 2px solid #176b50;
+    border-color: #176b50;
+}
+
+/* Advanced selector 2: Negation pseudo-class */
+input:not([type="date"]) {
+    background-color: #fafafa;
+}
+
+/* Button styling */
+button {
+    background-color: #176b50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #104d39;
+}
+
+/* Expense table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Colored table header */
+thead {
+    background-color: #176b50;
+    color: white;
+}
+
+/* Advanced selector 3: Position pseudo-class */
+tr:nth-child(even) {
+    background-color: #e8f3ee;
+}
+
+/* Advanced selector 4: Descendant selector */
+.expenses-section td {
+    color: #333;
+}
+
+/* Table hover effect */
+tbody tr:hover {
+    background-color: #cce8dc;
+}
+
+/* Instructions styling */
+details {
+    padding: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #176b50;
+}
+
+/* Video styling */
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #555;
+}
