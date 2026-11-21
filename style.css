@@ -1,134 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
-/* General page styling */
+:root {
+    --primary: #167A65;
+    --light-green: #E8F5F0;
+    --background: #F4F7F6;
+    --dark-text: #263B36;
+    --white: #FFFFFF;
+    --border: #DCE8E3;
+}* 
+
+{
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--dark-text);
     margin: 0;
-    padding: 20px;
-    color: #333;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
 }
 
-/* Header styling */
-header {
+h1 {
+    font-size: 30px;
     text-align: center;
-    background-color: #176b50;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-header img {
-    display: block;
-    margin: auto;
-}
-
-/* Section styling */
-section {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #176b50;
+    font-size: 22px;
+}
+header {
+    background-color: var(--white);
+    padding: 25px;
+    margin: 0 auto 25px;
+    max-width: 1100px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+}
+form {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 
-/* Form styling */
-.add-expense-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
-input,
-select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Advanced selector 1: Focus pseudo-class */
-input:focus,
-select:focus {
-    outline: 2px solid #176b50;
-    border-color: #176b50;
-}
-
-/* Advanced selector 2: Negation pseudo-class */
-input:not([type="date"]) {
-    background-color: #fafafa;
-}
-
-/* Button styling */
-button {
-    background-color: #176b50;
-    color: white;
+input, select {
+    width: 100%;
     padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #C8D8D1;
+    border-radius: 7px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--primary);
+    border-color: var(--primary);
+}
+button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 22px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #104d39;
+    background-color: #105C4C;
 }
-
-/* Expense table styling */
 table {
     width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    background-color: var(--white);
     border-collapse: collapse;
+    border: 1px solid var(--border);
 }
 
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 12px;
+th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px;
     text-align: left;
 }
 
-/* Colored table header */
-thead {
-    background-color: #176b50;
-    color: white;
+td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--border);
 }
 
-/* Advanced selector 3: Position pseudo-class */
-tr:nth-child(even) {
-    background-color: #e8f3ee;
+tbody tr:nth-child(even) {
+    background-color: var(--light-green);
 }
 
-/* Advanced selector 4: Descendant selector */
-.expenses-section td {
-    color: #333;
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
 }
 
-/* Table hover effect */
 tbody tr:hover {
-    background-color: #cce8dc;
+    background-color: #D5EBE2;
 }
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
 
-/* Instructions styling */
-details {
-    padding: 10px;
-}
+    h1 {
+        font-size: 23px;
+    }
 
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #176b50;
-}
+    form {
+        padding: 15px;
+    }
 
-/* Video styling */
-iframe {
-    max-width: 100%;
-    border-radius: 8px;
-}
+    table {
+        font-size: 13px;
+    }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 15px;
-    color: #555;
+    th, td {
+        padding: 9px 6px;
+    }
 }
